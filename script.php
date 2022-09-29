@@ -63,38 +63,56 @@
 
 
 //  3 урок 1 задание 
-$evenArr = [2, 4, 6, 8, 10, 12, 14,  16,  18, 20];
+// $evenArr = [2, 4, 6, 8, 10, 12, 14,  16,  18, 20];
 
-$oddArr = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
+// $oddArr = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
 
-$arr1 = $evenArr[0] * $oddArr[0];
-$arr2 = $evenArr[1] * $oddArr[1];
-$arr3 = $evenArr[2] * $oddArr[2];
-$arr4 = $evenArr[3] * $oddArr[3];
-$arr5 = $evenArr[4] * $oddArr[4];
-$arr6 = $evenArr[5] * $oddArr[5];
-$arr7 = $evenArr[6] * $oddArr[6];
-$arr8 = $evenArr[7] * $oddArr[7];
-$arr9 = $evenArr[8] * $oddArr[8];
-$arr10 = $evenArr[9] * $oddArr[9];
+// $arr1 = $evenArr[0] * $oddArr[0];
+// $arr2 = $evenArr[1] * $oddArr[1];
+// $arr3 = $evenArr[2] * $oddArr[2];
+// $arr4 = $evenArr[3] * $oddArr[3];
+// $arr5 = $evenArr[4] * $oddArr[4];
+// $arr6 = $evenArr[5] * $oddArr[5];
+// $arr7 = $evenArr[6] * $oddArr[6];
+// $arr8 = $evenArr[7] * $oddArr[7];
+// $arr9 = $evenArr[8] * $oddArr[8];
+// $arr10 = $evenArr[9] * $oddArr[9];
 
-$array = [$arr1, $arr2, $arr3, $arr5, $arr6, $arr7, $arr8, $arr9, $arr10];
-print_r($array);
+// $array = [$arr1, $arr2, $arr3, $arr5, $arr6, $arr7, $arr8, $arr9, $arr10];
+// print_r($array);
 
-// 3 урок 2 задание 
+// // 3 урок 2 задание 
 
-$wish = ['счастья', 'здоровья', 'удачи'];
+// $wish = ['счастья', 'здоровья', 'удачи'];
 
-$epithets = ['бесконечного', 'крепкого', 'большой'];
+// $epithets = ['бесконечного', 'крепкого', 'большой'];
 
-$array1 = array_rand($epithets);
-$arrayEpithets = $epithets[$array1];
+// $array1 = array_rand($epithets);
+// $arrayEpithets = $epithets[$array1];
 
-$array2 = array_rand($wish);
-$arrayWish = $wish[$array2];
+// $array2 = array_rand($wish);
+// $arrayWish = $wish[$array2];
 
-$name = readline('Как вас зовут?');
+// $name = readline('Как вас зовут?');
 
 
-echo "Здравствуйте, $name Поздравляю вас с днём рождения желаю $arrayEpithets $arrayWish, $arrayEpithets $arrayWish, $arrayEpithets $arrayWish";
+// echo "Здравствуйте, $name Поздравляю вас с днём рождения желаю $arrayEpithets $arrayWish, $arrayEpithets $arrayWish, $arrayEpithets $arrayWish";
+
+
+$numbers = [4, 5, 1, 4, 7, 8, 15, 6, 71, 45, 2];
+
+
+
+$result = array_map(function (int $number) {
+  return $number / 2;
+}, $numbers); 
+
+for ($i = 0; $i < count($numbers); $i++) {
+    if (is_int($result) == true) {
+    echo 'четные\n';
+} else {
+    echo 'нечетные\n';
+}
+}
+
 
