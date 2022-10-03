@@ -99,20 +99,28 @@
 // echo "Здравствуйте, $name Поздравляю вас с днём рождения желаю $arrayEpithets $arrayWish, $arrayEpithets $arrayWish, $arrayEpithets $arrayWish";
 
 
-$numbers = [4, 5, 1, 4, 7, 8, 15, 6, 71, 45, 2];
+// $numbers = [4, 5, 1, 4, 7, 8, 15, 6, 71, 45, 2];
 
 
 
-$result = array_map(function (int $number) {
-  return $number / 2;
-}, $numbers); 
+// $result = array_map(function (int $number) {
+//   return $number / 2;
+// }, $numbers); 
 
-for ($i = 0; $i < count($numbers); $i++) {
-    if (is_int($result) == true) {
-    echo 'четные\n';
-} else {
-    echo 'нечетные\n';
-}
-}
+// for ($i = 0; $i < count($numbers); $i++) {
+//     if (is_int($result) == true) {
+//     echo 'четные\n';
+// } else {
+//     echo 'нечетные\n';
+// }
+// }
 
 
+require_once "Task.php";
+require_once "User.php";
+
+$user = new User('User1', 'user@bk.ru');
+$task = new Task($user, 'task №1', 6);
+
+
+var_dump($task);
