@@ -6,6 +6,7 @@
 <h1><?= $pageHeader ?></h1>
 
 <?php if (is_null($username)): ?>
+    <a href="/?controller=registration">[Зарегистрироваться]</a>
     <a href="/?controller=security">Войти</a>
 <?php else: ?>
     <?=$username?> <a href="/?controller=security&action=logout">Выйти</a>

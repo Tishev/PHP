@@ -1,8 +1,8 @@
 <?php
-include "model/User.php";
-include "model/UserProvider.php";
+include "models/User.php";
+include "models/UserProvider.php";
 
-$pdo = new PDO('sqlite:database.db');
+$pdo = require 'db.php';
 
 $pdo->exec('CREATE TABLE users (
   id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
@@ -10,6 +10,13 @@ $pdo->exec('CREATE TABLE users (
   username VARCHAR(100) NOT NULL,
   password VARCHAR(100) NOT NULL
 )');
+
+$pdo->exec('CREATE TABLE tasks (
+  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER NOT NULL,
+  description TEXT NOT NULL
+)');
+
 
 $user = new User('admin');
 $user->setName('Ember Song');

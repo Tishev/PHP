@@ -1,5 +1,5 @@
 <?php
-require_once 'model/User.php';
+require_once 'models/User.php';
 session_start();
 $pageHeader = 'Добро пожаловать в TODO';
 
